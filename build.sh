@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf install -y \
-	bat exa fd-find fzf ripgrep thefuck tmux zellij zoxide \
+	bat exa fd-find fzf ripgrep thefuck tmux zoxide \
 	zsh fish \
 	cascadia-code-fonts \
 	gnome-keyring-pam \
@@ -29,6 +29,11 @@ dnf5 -y copr disable ryanabx/cosmic-epoch
 dnf5 -y copr enable agriffis/neovim-nightly 
 dnf5 install -y neovim
 dnf5 -y copr disable agriffis/neovim-nightly
+
+# Zellij
+dnf5 -y copr enable varlad/zellij 
+dnf5 install -y zellij
+dnf5 -y copr disable varlad/zellij 
 
 #### Example for enabling a System Unit File
 
