@@ -10,8 +10,9 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
+# TODO: Add eza back in when built in Fedora 42
 dnf install -y \
-  bat exa fd-find ncdu ripgrep thefuck zoxide \
+  bat fd-find ncdu ripgrep thefuck zoxide \
   unrar \
   NetworkManager-tui \
   ulauncher
@@ -23,6 +24,11 @@ dnf install -y \
 
 # Install Sway
 ./scripts/sway.sh
+
+# Eza not in Fedora 42 yet
+dnf5 -y copr enable alternateved/eza
+dnf5 install -y eza
+dnf5 -y copr disable alternateved/eza
 
 # Neovim Nightly
 dnf5 -y copr enable agriffis/neovim-nightly
