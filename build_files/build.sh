@@ -23,7 +23,7 @@ dnf install -y \
 # dnf5 -y copr disable ryanabx/cosmic-epoch
 
 # Install Sway
-./scripts/sway.sh
+/ctx/scripts/sway.sh
 
 # Eza not in Fedora 42 yet
 dnf5 -y copr enable alternateved/eza
@@ -45,7 +45,7 @@ dnf5 -y copr disable varlad/zellij
 systemctl enable podman.socket
 
 # Install 1password
-./scripts/install-1password.sh
+/ctx/scripts/install-1password.sh
 
 # Install twingate
-./scripts/install-twingate.sh
+/ctx/scripts/install-twingate.sh
