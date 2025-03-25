@@ -11,16 +11,10 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf install -y \
-  bat exa fd-find fzf ncdu ripgrep thefuck tmux zoxide \
-  zsh fish \
-  cascadia-code-fonts \
-  gnome-keyring-pam \
+  bat exa fd-find ncdu ripgrep thefuck zoxide \
   unrar \
-  htop \
-  nmap-ncat \
   NetworkManager-tui \
-  ulauncher \
-  tailscale
+  ulauncher
 
 # # Install Cosmic
 # dnf5 -y copr enable ryanabx/cosmic-epoch
