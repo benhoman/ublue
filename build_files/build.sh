@@ -10,15 +10,42 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf install -y \
+  bat exa fd-find fzf ncdu ripgrep thefuck tmux zoxide \
+  zsh fish \
+  cascadia-code-fonts \
+  gnome-keyring-pam \
+  unrar \
+  htop \
+  nmap-ncat \
+  NetworkManager-tui \
+  ulauncher \
+  tailscale
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# # Install Cosmic
+# dnf5 -y copr enable ryanabx/cosmic-epoch
+# dnf5 install -y cosmic-desktop
+# dnf5 -y copr disable ryanabx/cosmic-epoch
+
+# Install Sway
+./scripts/sway.sh
+
+# Neovim Nightly
+dnf5 -y copr enable agriffis/neovim-nightly
+dnf5 install -y neovim
+dnf5 -y copr disable agriffis/neovim-nightly
+
+# Zellij
+dnf5 -y copr enable varlad/zellij
+dnf5 install -y zellij
+dnf5 -y copr disable varlad/zellij
 
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+# Install 1password
+./scripts/install-1password.sh
+
+# Install twingate
+./scripts/install-twingate.sh
