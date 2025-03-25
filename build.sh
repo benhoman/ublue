@@ -11,19 +11,21 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf install -y \
-  bat exa fd-find fzf ripgrep thefuck tmux zoxide \
+  bat exa fd-find fzf ncdu ripgrep thefuck tmux zoxide \
   zsh fish \
   cascadia-code-fonts \
   gnome-keyring-pam \
   unrar \
   htop \
   nmap-ncat \
-  NetworkManager-tui
+  NetworkManager-tui \
+  ulauncher \
+  tailscale
 
-# Install Cosmic
-dnf5 -y copr enable ryanabx/cosmic-epoch
-dnf5 install -y cosmic-desktop
-dnf5 -y copr disable ryanabx/cosmic-epoch
+# # Install Cosmic
+# dnf5 -y copr enable ryanabx/cosmic-epoch
+# dnf5 install -y cosmic-desktop
+# dnf5 -y copr disable ryanabx/cosmic-epoch
 
 # Install Sway
 /tmp/scripts/sway.sh
