@@ -26,9 +26,11 @@ dnf install -y \
 # /ctx/scripts/sway.sh
 
 # Ghostty
-dnf5 -y copr enable pgdev/ghostty
+# dnf5 -y copr enable pgdev/ghostty
+dnf5 -y copr enable scottames/ghostty
 dnf5 install -y ghostty
-dnf5 -y copr disable pgdev/ghostty
+# dnf5 -y copr disable pgdev/ghostty
+dnf5 -y copr disable scottames/ghostty
 
 # # Eza not in Fedora 42 yet
 # dnf5 -y copr enable alternateved/eza
