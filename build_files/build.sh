@@ -23,12 +23,17 @@ dnf install -y \
 # dnf5 -y copr disable ryanabx/cosmic-epoch
 
 # Install Sway
-/ctx/scripts/sway.sh
+# /ctx/scripts/sway.sh
 
-# Eza not in Fedora 42 yet
-dnf5 -y copr enable alternateved/eza
-dnf5 install -y eza
-dnf5 -y copr disable alternateved/eza
+# Ghostty
+dnf5 -y copr enable pgdev/ghostty
+dnf5 install -y ghostty
+dnf5 -y copr disable pgdev/ghostty
+
+# # Eza not in Fedora 42 yet
+# dnf5 -y copr enable alternateved/eza
+# dnf5 install -y eza
+# dnf5 -y copr disable alternateved/eza
 
 # Neovim Nightly
 dnf5 -y copr enable agriffis/neovim-nightly
