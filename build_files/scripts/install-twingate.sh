@@ -43,4 +43,3 @@ dnf5 install -y twingate-latest
 
 # Disable the yum repo (updates are baked into new images)
 sed -i "s@enabled=1@enabled=0@" /etc/yum.repos.d/packages.twingate.com_rpm_.repo
-
