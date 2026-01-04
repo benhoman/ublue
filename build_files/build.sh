@@ -11,11 +11,11 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # TODO: Add eza back in when built in Fedora 42
-dnf install -y \
-	bat fd-find ncdu ripgrep thefuck zoxide \
-	unrar \
-	NetworkManager-tui \
-	ulauncher
+# dnf install -y \
+# 	bat fd-find ncdu ripgrep thefuck zoxide \
+# 	unrar \
+# 	NetworkManager-tui \
+# 	ulauncher
 
 # # Install Cosmic
 # dnf5 -y copr enable ryanabx/cosmic-epoch
@@ -43,16 +43,16 @@ dnf5 install -y neovim
 dnf5 -y copr disable agriffis/neovim-nightly
 
 # Zellij
-dnf5 -y copr enable varlad/zellij
-dnf5 install -y zellij
-dnf5 -y copr disable varlad/zellij
+# dnf5 -y copr enable varlad/zellij
+# dnf5 install -y zellij
+# dnf5 -y copr disable varlad/zellij
 
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
 
 # Install 1password
-/ctx/scripts/install-1password.sh
+# /ctx/scripts/install-1password.sh
 
 # Install twingate
-/ctx/scripts/install-twingate.sh
+# /ctx/scripts/install-twingate.sh
