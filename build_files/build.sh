@@ -11,7 +11,8 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # TODO: Add eza back in when built in Fedora 42
-# dnf install -y \
+dnf5 install -y \
+    tmux
 # 	bat fd-find ncdu ripgrep thefuck zoxide \
 # 	unrar \
 # 	NetworkManager-tui \
@@ -42,6 +43,13 @@ dnf5 -y copr enable agriffis/neovim-nightly
 dnf5 install -y neovim
 dnf5 -y copr disable agriffis/neovim-nightly
 
+
+# Install 1password
+/ctx/scripts/install-1password.sh
+
+# Install twingate
+/ctx/scripts/install-twingate.sh
+
 # Zellij
 # dnf5 -y copr enable varlad/zellij
 # dnf5 install -y zellij
@@ -50,9 +58,3 @@ dnf5 -y copr disable agriffis/neovim-nightly
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-
-# Install 1password
-# /ctx/scripts/install-1password.sh
-
-# Install twingate
-# /ctx/scripts/install-twingate.sh
