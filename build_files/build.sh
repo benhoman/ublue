@@ -12,10 +12,10 @@ set -ouex pipefail
 # this installs a package from fedora repos
 # TODO: Add eza back in when built in Fedora 42
 dnf install -y \
-  bat fd-find ncdu ripgrep thefuck zoxide \
-  unrar \
-  NetworkManager-tui \
-  ulauncher
+	bat fd-find ncdu ripgrep thefuck zoxide \
+	unrar \
+	NetworkManager-tui \
+	ulauncher
 
 # # Install Cosmic
 # dnf5 -y copr enable ryanabx/cosmic-epoch

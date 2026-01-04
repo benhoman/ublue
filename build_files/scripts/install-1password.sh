@@ -73,4 +73,3 @@ EOF
 
 # Disable the yum repo (updates are baked into new images)
 sed -i "s@enabled=1@enabled=0@" /etc/yum.repos.d/1password.repo
-
