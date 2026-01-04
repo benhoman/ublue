@@ -43,6 +43,9 @@ dnf5 -y copr enable agriffis/neovim-nightly
 dnf5 install -y neovim
 dnf5 -y copr disable agriffis/neovim-nightly
 
+# Brave
+dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+dnf5 install -y brave-browser
 
 # Install 1password
 /ctx/scripts/install-1password.sh
